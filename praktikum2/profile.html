@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	label,input,h2{
+		font-family: "Calibri";
+	}
+	form{
+		display: block;
+		width: 43%;
+		height: auto;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 100px;
+		border: 1px solid #E4E4E4;
+		box-sizing: border-box;
+		border-radius:3px;
+		padding-left: 5px;
+		padding-bottom: 10px;
+	}
+	h2{
+		margin-bottom: 5px;
+		margin-top: 0px;
+		margin-left: -6px;
+		padding-left: 10px;
+		height: 35px;
+		display: block;
+		background-color: #ECF0F0;
+	}
+	label{
+		display: inline-block;
+		width: 200px;
+		margin-bottom: 6px;
+	}
+	label.alamat{
+		position: relative;
+		top: -10px;
+	}
+	
+	</style>
+</head>
+<body>
+<form id="register" method="POST">
+	<h2>Form Registrasi</h2>
+	<label name"nama_lengkap">Nama Lengkap : </label>
+	<input type="text" name="nama_lengkap"></input> <br>		
+
+	<label name"email">Email : </label>
+	<input type="email" name="email"></input><br>
+
+	<label name"password">Password : </label>
+	<input type="password" name="password"></input><br>
+
+	<label name"cfm_password">Konfirmasi Password : </label>
+	<input type="password" name="cfm_password"></input><br>
+
+	<label name"jenis_kelamin">Jenis Kelamin : </label>
+	<input type="radio" name="jenis_kelamin" value="laki-laki">Laki Laki</input>
+	<input type="radio" name="jenis_kelamin" value="perempuan">Perempuan</input><br>
+
+	<label name"alamat" class="alamat">Alamat : </label>
+	<textarea type="text" name="alamat" cols=21.8></textarea><br>
+
+	<label name"kode_pos">Kode Pos : </label>
+	<input type="text" name="kode_pos"></input><br>
+
+	<label name"mobile_phone">Mobile Phone : </label>
+	<input type="text" name="mobile_phone"></input><br>
+	<button class="action">Register</button>	
+	<button class="reset">Cancel</button><br>
+
+
+</form>
+</body>
+</html>
