@@ -3,10 +3,10 @@
 <head>
 	<title></title>
 	<style type="text/css">
-	html,body{
-			height: 100%;
-            margin: 0;
-            padding: 0;
+	body{
+		height: 100%;
+        margin: 0;
+        padding: 0;
     }			
     body{
     	background: url("https://www.walldevil.com/wallpapers/w03/025271-abstract-background-gaussian-blur.jpg") no-repeat center center fixed;
@@ -16,39 +16,60 @@
 	}
 	form{
 		display: block;
-		width: 43%;
+		width: 30%;
 		height: auto;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 100px;
-		border: 1px solid #E4E4E4;
 		box-sizing: border-box;
-		border-radius:3px;
-		padding-left: 5px;
+		border-radius:2px;
+		padding-left: 20px;
 		padding-bottom: 10px;
-		background-color: 
+		background-color: #cccccc;
+		position: relative;
 	}
 	h2{
-		margin-bottom: 5px;
-		margin-top: 0px;
-		margin-left: -6px;
-		padding-left: 10px;
+		margin-bottom: 10px;
+		padding-top: 8px;
+		margin-left: -20px;
 		height: 35px;
 		display: block;
-		background-color: #ECF0F0;
+		font-size: 21px;
+		background-color: #46384c;
+		text-align: center;
+		color: #ececec;cs
 	}
 	label{
 		display: inline-block;
 		width: 200px;
 		margin-bottom: 6px;
 	}
-	label.alamat{
-		position: relative;
-		top: -10px;
+	input,select,textarea{
+		padding: 10px;
+		width: 88%;
+		margin-bottom: 5px;
+		background-color: #cccccc;
+		border: 1px solid #BFBCBC;
 	}
-	form{
-		z-index: 100px;
+	input:focus,select:focus,textarea:focus,button{
+		outline:2px solid #86629C;
 	}
+	textarea{
+		resize: none;
+		width: 88.5%;
+		padding-top:10px;
+	}
+	select{
+		width:94.45%;
+	}
+	select,
+	select option {
+		color: #999999;	
+	}
+	select option[value="-"] {
+	  	color: #999999;
+	}
+	
 	.bg{
 		 position: fixed; 
 		  top: -50%; 
@@ -66,40 +87,47 @@
 		  min-width: 50%;
 		  min-height: 50%;
 		  z-index: -999;
+		  
+	}
+	form .button{
+		text-align: center;
+		padding-right:10px;
+
+	}
+	.button button{
+		padding: 10px 20px;
+		background-color: #46384c;
+		border: none;
+		color:#dadada;
 	}
 	</style>
 </head>
 <body>
 <form id="register" method="POST">
-	<h2>Form Registrasi</h2>
-	<label name"nama_lengkap">Nama Lengkap : </label>
-	<input type="text" name="nama_lengkap"></input> <br>		
+	<h2>Biodata</h2>
 
-	<label name"email">Email : </label>
-	<input type="email" name="email"></input><br>
+	<input type="text" name="nama_lengkap" placeholder = "Nama Lengkap*"></input> <br>		
 
-	<label name"password">Password : </label>
-	<input type="password" name="password"></input><br>
+	<input type="email" name="email" placeholder = "Email*"></input><br>
 
-	<label name"cfm_password">Konfirmasi Password : </label>
-	<input type="password" name="cfm_password"></input><br>
+	<input type="password" name="password" placeholder = "Password*"></input><br>
 
-	<label name"jenis_kelamin">Jenis Kelamin : </label>
-	<input type="radio" name="jenis_kelamin" value="laki-laki">Laki Laki</input>
-	<input type="radio" name="jenis_kelamin" value="perempuan">Perempuan</input><br>
+	<input type="password" name="cfm_password" placeholder = "Konfirmasi Password*"></input><br>
 
-	<label name"alamat" class="alamat">Alamat : </label>
-	<textarea type="text" name="alamat" cols=21.8></textarea><br>
+	<select name="" id="" placeholder="Jenis Kelamin">
+		<option value="-">-jenis kelamin-</option>
+		<option value="laki-laki">Laki Laki</option>
+		<option value="perempuan">Perempuan</option>
+	</select><br>
 
-	<label name"kode_pos">Kode Pos : </label>
-	<input type="text" name="kode_pos"></input><br>
+	<textarea type="text" name="alamat" cols=21.8 placeholder="Alamat"></textarea><br>
 
-	<label name"mobile_phone">Mobile Phone : </label>
-	<input type="text" name="mobile_phone"></input><br>
-	<button class="action">Register</button>	
-	<button class="reset">Cancel</button><br>
+	<input type="text" name="kode_pos" placeholder="Kode Pos" ></input><br>
 
-
+	<input type="text" name="mobile_phone" placeholder="Nomor Telepon"></input><br>
+	<div class="button">
+		<button class="action" class="action">Register</button>	
+	</div>
 </form>
 </body>
 </html>
