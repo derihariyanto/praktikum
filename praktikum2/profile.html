@@ -3,6 +3,14 @@
 <head>
 	<title></title>
 	<style type="text/css">
+	html,body{
+			height: 100%;
+            margin: 0;
+            padding: 0;
+    }			
+    body{
+    	background: url("https://www.walldevil.com/wallpapers/w03/025271-abstract-background-gaussian-blur.jpg") no-repeat center center fixed;
+    }
 	label,input,h2{
 		font-family: "Calibri";
 	}
@@ -18,6 +26,7 @@
 		border-radius:3px;
 		padding-left: 5px;
 		padding-bottom: 10px;
+		background-color: 
 	}
 	h2{
 		margin-bottom: 5px;
@@ -37,7 +46,27 @@
 		position: relative;
 		top: -10px;
 	}
-	
+	form{
+		z-index: 100px;
+	}
+	.bg{
+		 position: fixed; 
+		  top: -50%; 
+		  left: -50%; 
+		  width: 200%; 
+		  height: 200%;
+	}
+	.bg img{
+		 position: absolute; 
+		  top: 0; 
+		  left: 0; 
+		  right: 0; 
+		  bottom: 0; 
+		  margin: auto; 
+		  min-width: 50%;
+		  min-height: 50%;
+		  z-index: -999;
+	}
 	</style>
 </head>
 <body>
