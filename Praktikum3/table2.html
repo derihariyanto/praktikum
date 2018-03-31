@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table</title>
+	<style type="text/css">
+	table{
+		margin-left: 50px;
+		margin-top: 60px;
+	}
+	table,th,td{
+		border-collapse: collapse;
+		font-family: "calibri";
+	}
+	th,td{
+		padding: 5px 10px;
+	}
+	tr:nth-child(even){
+		background-color: #f4f4f4;
+	}
+	tr:nth-child(odd){
+		background-color: #e8e8e8;
+	}tr:nth-child(odd) td[rowspan]{
+		background-color: #e8e8e8;
+	}
+	tr:nth-child(even) td[rowspan]{
+		background-color: #f4f4f4;
+	}
+	tr:first-child{
+		margin: 0;
+		padding: 0;
+		background-color: #999999;
+		color: #fff;
+	}
+	</style>
+</head>
+<body>
+<section class="content">
+	<table>
+		<tr>
+			<th>Nama</th>
+			<th>Jenis Kelamin</th>
+			<th>Email</th>
+			<th>No HP</th>
+			<th>Tgl Lahir</th>
+		</tr>
+		<tr>
+			<td>Mira</td>
+			<td>Perempuan</td>
+			<td>mira@hotmail.com</td>
+			<td>085398771923</td>
+			<td>24 Mei 1993</td>
+		</tr>
+		<tr>
+			<td>Khoir</td>
+			<td>Laki Laki</td>
+			<td>khoir@hotmail.com</td>
+			<td>0823151237523</td>
+			<td>01 September 1993</td>
+		</tr>
+		<tr>
+			<td>Hasan Ashari</td>
+			<td>Laki Laki</td>
+			<td>ashari.hasan@hotmail.com</td>
+			<td>081264738524</td>
+			<td>08 Maret 1993</td>
+		</tr>
+		<tr>
+			<td>Helmi</td>
+			<td>Laki Laki</td>
+			<td>helmi@gmail.com</td>
+			<td>086323748524</td>
+			<td>13 Desember 1993</td>
+		</tr>
+		<tr>
+			<td>Hilaria Deanti</td>
+			<td>Perempuan</td>
+			<td>Deanti@gmail.com</td>
+			<td>082453617422</td>
+			<td>24 Januari 1994</td>
+		</tr>
+		<tr>
+			<td>Indah</td>
+			<td>Perempuan</td>
+			<td>indah@gmail.com</td>
+			<td>085263728412</td>
+			<td>14 Februari 1993</td>
+		</tr>
+		<tr>
+			<td>Maulana</td>
+			<td>Laki Laki</td>
+			<td>m.lana@gmail.com</td>
+			<td>084212351231</td>
+			<td>17 mei 1993</td>
+		</tr>
+		<tr>
+			<td>Ika Surya</td>
+			<td>Laki Laki</td>
+			<td>surya.ika@gmail.com</td>
+			<td>086234785241</td>
+			<td>10 Februari 1993</td>
+		</tr>
+		<tr>
+			<td>Hendri</td>
+			<td>Laki Laki</td>
+			<td>hendri@gmail.com</td>
+			<td>085241237412</td>
+			<td>20 April 1993</td>
+		</tr>
+		<tr>
+			<td rowspan="2">Eka Gusti</td>
+			<td rowspan="2">Laki Laki</td>
+			<td rowspan="2">G.Eka@gmail.com</td>
+			<td>085141235121</td>
+			<td rowspan="2">05 Juni 1993</td>
+		</tr>
+			<tr>
+				<td>084131251612</td>
+			</tr>
+		<tr>
+			<td>Budi Suyanto</td>
+			<td>Laki Laki</td>
+			<td>ini.budi@gmail.com</td>
+			<td>086323748524</td>
+			<td>10 Juni 1993</td>
+		</tr>
+	</table>
+
+</section>
+</body>
+</html>
