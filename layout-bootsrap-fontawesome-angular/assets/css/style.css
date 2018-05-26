@@ -1,0 +1,44 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	max-width: 768px;
+	padding-top: 10px;
+	padding-left: 130px;
+	@include float-left;
+}
+.container{
+	max-width: 800px;
+	@include float-left;
+}
+.header{
+	background-color: blue;
+	max-width: 800px;
+	padding: 10px 0;
+	height: 130px;
+	text-align: right;
+	color: #fff;
+	@include float-left;
+}
+.menu{
+	background-color: orange;
+	display: block;
+	max-width: 800px;
+	text-align: center;
+	padding: 15px 0;
+	@include float-left;
+}
+.text-center{
+	margin-top: 9px;
+	text-align: center;
+	vertical-align: center;
+	display: inline-block;
+	@include float-left;
+}
+.text-center i{
+	font-size: 50px;
+	text-align: center;
+	display: inline-block;
+	@include float-left;
+}

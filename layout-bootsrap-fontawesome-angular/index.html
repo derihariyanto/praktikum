@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>asd</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-route.js"></script>
+
+	<script type="text/javascript">
+		var app = angular.module("MyApp", ["ngRoute"]);
+		app.config(function($routeProvider){
+			$routeProvider
+			.when('/', {
+				templateUrl : 'main.htm',
+				controller : 'mainCtrl'
+			})
+			.when('/about', {
+				templateUrl : 'about.htm',
+				controller : 'aboutCtrl'
+			})
+			.when('/product', {
+				templateUrl : 'weather.htm',
+				controller : 'weatherCtrl'
+			})
+			.when('/contact', {
+				templateUrl : 'contact.htm',
+				controller : 'contactCtrl'
+			})
+		});
+
+		app.controller('weatherCtrl', function($scope,$http){
+				var url = 'http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=4de4dd041e499ca8a4f6692097befdae';
+				$http.get(url).then(function(response){
+					$scope.info = response.data;
+					
+					var temp = response.data.main.temp;
+					$scope.cel = temp-273;
+ 				});
+				$scope.title = "Weather of London";
+			});
+
+		app.controller('aboutCtrl', function($scope){
+			$scope.num = 10 * 5.2;
+		});
+	</script>
+</head>
+<body>
+	<div ng-app = "MyApp" class="container-fluid">
+	
+		<div class="row header">
+			<div class="col-12">
+				title of web
+			</div>	
+		</div>
+		<div class="row menu">
+			<div class="col-12">
+				<a href="#/!">Home</a>
+				<a href="#!about">About</a>
+				<a href="#!product">Weather</a>
+				<a href="#!contact">Contact</a>
+			</div>
+				
+		<ng-view></ng-view>	
+		</div>
+		<div class="row">
+			
+		</div>
+	</div>
+</body>
+</html>
